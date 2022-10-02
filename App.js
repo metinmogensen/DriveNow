@@ -1,7 +1,8 @@
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet,Platform, StatusBar } from 'react-native';
+import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
 import SearchBox from './src/components/search-box/search-box.component';
 import List from './src/components/list/list.component';
+
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
 
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {

@@ -1,11 +1,17 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { Searchbar } from 'react-native-paper';
+import { useState } from 'react';
+
 
 const SearchBox = () => {
 
   return (
     <View style={styles.searchBox}>
 
-      <Text> i am the searchbox</Text>
+        <Searchbar
+      placeholder="Search"
+
+    />
     </View>
   );
   }
@@ -14,7 +20,7 @@ const SearchBox = () => {
 const styles = StyleSheet.create({
   searchBox: {
     padding:16,
-    backgroundColor: 'blue'
+    backgroundColor: 'white'
   },
 });
 
