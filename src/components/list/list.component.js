@@ -1,10 +1,10 @@
-import { StyleSheet, View } from 'react-native';
-import React from 'react';
+import { StyleSheet, View, FlatList } from 'react-native';
+import React, { useState } from 'react';
 import { Button, Card } from 'react-native-paper';
 
 
 const List = ( ) => {
-  const drivingSchools = [ 
+  const [drivingSchools, setDrivingSchools] = useState([ 
     {
     name: 'Some Driving School',
     photos: [
@@ -20,20 +20,42 @@ const List = ( ) => {
     ],
     adress: ' Morsøvej 15 st. th. ',
     rating: 5,
+  },
+  {
+    name: 'Some Driving School 2',
+    photos: [
+      "https://image.shutterstock.com/image-photo/driving-school-beautiful-young-woman-600w-1135233953.jpg"
+    ],
+    adress: ' Morsøvej 15 st. th. ',
+    rating: 5,
+  },
+  {
+    name: 'Some Driving School 2',
+    photos: [
+      "https://image.shutterstock.com/image-photo/driving-school-beautiful-young-woman-600w-1135233953.jpg"
+    ],
+    adress: ' Morsøvej 15 st. th. ',
+    rating: 5,
   }
-]
-  
-  return drivingSchools.map( schools =>
-    <View style={styles.container}>
+])
+  return (
+<FlatList 
+data={drivingSchools}
+renderItem={({item}) => (
+  <View style={styles.container}>
   <Card> 
-    <Card.Title title={`${schools.name}`} subtitle={`${schools.adress}`} />
-  <Card.Cover source={{ uri: schools.photos[0] }} />
-    <Card.Actions>
-      <Button>Look op stats</Button>
-      <Button>Contant</Button>
-    </Card.Actions>
-  </Card>
-    </View>
+  <Card.Title title={item.name} subtitle={item.adress} />
+<Card.Cover source={{ uri: item.photos[0] }} />
+  <Card.Actions>
+    <Button>Look op stats</Button>
+    <Button>Contant</Button>
+  </Card.Actions>
+</Card>
+  </View>
+
+)}
+/>
+
   )}
 
 const styles = StyleSheet.create({
