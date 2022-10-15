@@ -1,14 +1,14 @@
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
+import { SafeAreaView, StyleSheet, StatusBar, View } from 'react-native';
 import DrivingSchoolScreen from './src/features/screens/drivingSchool.screen';
 
 
 export default function App() {
   return (
     <>    
-    <SafeAreaView style={styles.container}>   
+    <View>
       <DrivingSchoolScreen />  
-    </SafeAreaView>
+      </View>
     <ExpoStatusBar style='auto'/>
     </>
 
