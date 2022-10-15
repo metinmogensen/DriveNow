@@ -1,15 +1,13 @@
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
-import SearchBox from './src/components/search-box/search-box.component';
-import List from './src/components/list/list.component';
+import DrivingSchoolScreen from './src/features/screens/drivingSchool.screen';
 
 
 export default function App() {
   return (
     <>    
     <SafeAreaView style={styles.container}>   
-        <SearchBox />
-        <List /> 
+      <DrivingSchoolScreen />  
     </SafeAreaView>
     <ExpoStatusBar style='auto'/>
     </>
