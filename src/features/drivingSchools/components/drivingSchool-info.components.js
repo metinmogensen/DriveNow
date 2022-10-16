@@ -21,9 +21,9 @@ export const DrivingschoolInfo = ({ drivingSchools = {} }) => {
       "https://media.istockphoto.com/photos/teenager-learning-to-drive-picture-id124089966",
     ],
     adress = "Frederiksberg",
-    isOpenNow = false,
+    isOpenNow = true,
     rating = 4,
-    isVacationClosed = true,
+    isVacationClosed = false,
   } = drivingSchools;
 
   const ratingArray = Array.from(new Array(Math.floor(rating)));
