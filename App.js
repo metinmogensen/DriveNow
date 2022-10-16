@@ -25,11 +25,10 @@ export default function App() {
 
   return (
     <>
-    <ThemeProvider theme={theme}>
-      <DrivingSchoolScreen theme={theme} />
-      <ExpoStatusBar style="auto" />
+      <ThemeProvider theme={theme}>
+        <DrivingSchoolScreen theme={theme} />
+        <ExpoStatusBar style="auto" />
       </ThemeProvider>
     </>
   );
 }
-

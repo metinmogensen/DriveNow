@@ -21,7 +21,8 @@
     "react-native": "0.69.6",
     "react-native-maps": "0.31.1",
     "react-native-paper": "^4.12.4",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "@expo/vector-icons": "^13.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
