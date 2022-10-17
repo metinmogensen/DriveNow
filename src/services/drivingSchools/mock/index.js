@@ -12,4 +12,7 @@ export const mocks = {
 
 export const mockImages = [
   "https://media.istockphoto.com/photos/teenager-learning-to-drive-picture-id124089966",
+  "https://media.istockphoto.com/photos/teenager-learning-to-drive-picture-id124089966",
+  "https://media.istockphoto.com/photos/teenager-learning-to-drive-picture-id124089966",
+  "https://media.istockphoto.com/photos/teenager-learning-to-drive-picture-id124089966",
 ];
