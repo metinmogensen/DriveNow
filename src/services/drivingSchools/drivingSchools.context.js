@@ -15,6 +15,7 @@ export const DrivingSchoolContextProvider = ({ children }) => {
 
   const retrievedrivingSchools = (loc) => {
     setIsLoading(true);
+    setDrivingSchools([]);
     setTimeout(() => {
       drivingSchoolRequest(loc)
         .then(requestTransformer)
