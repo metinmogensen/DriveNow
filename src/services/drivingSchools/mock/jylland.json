@@ -6,8 +6,8 @@
       "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": 55.61957506003352,
-          "lng": 12.406026477532995
+          "lat": 56.177954929635405,
+          "lng": 9.551663005275985
         },
         "viewport": {
           "northeast": {
@@ -20,7 +20,7 @@
           }
         }
       },
-      "name": "Mortens Køreskole2",
+      "name": "Mortens Køreskole 2",
       "opening_hours": {
         "open_now": true
       },

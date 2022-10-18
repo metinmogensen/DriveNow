@@ -2,13 +2,11 @@ import { mocks, mockImages } from "./mock";
 import camelize from "camelize";
 // Dette er mock for at arbejde på det uden at lave en database først.
 // Dette gør også at vi ikke behøver at lave en storybook for at arbejde på UI uden at være bundet af extern logik
-export const drivingSchoolRequest = (
-  location = "55.696017596611085, 12.517535363748198"
-) => {
+export const drivingSchoolRequest = (location) => {
   return new Promise((resolve, reject) => {
     const mock = mocks[location];
     if (!mock) {
-      reject("Vi har ikke nogen køreskoler i dette område endnu");
+      reject();
     } else {
       resolve(mock);
     }
@@ -29,12 +27,3 @@ export const requestTransformer = ({ results = [] }) => {
   });
   return camelize(mappedResults);
 };
-
-drivingSchoolRequest()
-  .then(requestTransformer)
-  .then((transformedRespone) => {
-    console.log(transformedRespone);
-  })
-  .catch((err) => {
-    console.log("error:", err);
-  });

@@ -12,6 +12,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { DrivingSchoolContextProvider } from "./src/services/drivingSchools/drivingSchools.context";
+import { LocationContextProvider } from "./src/services/location/location.context";
 
 function MAP() {
   return (
@@ -46,33 +47,37 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <DrivingSchoolContextProvider>
-          <NavigationContainer>
-            <Tab.Navigator
-              screenOptions={({ route }) => ({
-                tabBarIcon: ({ color, size }) => {
-                  let iconName;
+        <LocationContextProvider>
+          <DrivingSchoolContextProvider>
+            <NavigationContainer>
+              <Tab.Navigator
+                screenOptions={({ route }) => ({
+                  tabBarIcon: ({ color, size }) => {
+                    let iconName;
 
-                  if (route.name === "Skoler") {
-                    iconName = "search-outline";
-                  } else if (route.name === "Kort") {
-                    iconName = "map";
-                  } else if (route.name === "Indstillinger") {
-                    iconName = "md-settings";
-                  }
-                  // You can return any component that you like here!
-                  return <Ionicons name={iconName} size={size} color={color} />;
-                },
-                tabBarActiveTintColor: "tomato",
-                tabBarInactiveTintColor: "gray",
-              })}
-            >
-              <Tab.Screen name="Skoler" component={DrivingSchoolScreen} />
-              <Tab.Screen name="Kort" component={MAP} />
-              <Tab.Screen name="Indstillinger" component={Settings} />
-            </Tab.Navigator>
-          </NavigationContainer>
-        </DrivingSchoolContextProvider>
+                    if (route.name === "Skoler") {
+                      iconName = "search-outline";
+                    } else if (route.name === "Kort") {
+                      iconName = "map";
+                    } else if (route.name === "Indstillinger") {
+                      iconName = "md-settings";
+                    }
+                    // You can return any component that you like here!
+                    return (
+                      <Ionicons name={iconName} size={size} color={color} />
+                    );
+                  },
+                  tabBarActiveTintColor: "tomato",
+                  tabBarInactiveTintColor: "gray",
+                })}
+              >
+                <Tab.Screen name="Skoler" component={DrivingSchoolScreen} />
+                <Tab.Screen name="Kort" component={MAP} />
+                <Tab.Screen name="Indstillinger" component={Settings} />
+              </Tab.Navigator>
+            </NavigationContainer>
+          </DrivingSchoolContextProvider>
+        </LocationContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>

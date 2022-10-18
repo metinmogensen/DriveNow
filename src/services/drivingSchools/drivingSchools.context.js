@@ -1,4 +1,5 @@
-import React, { useState, createContext, useEffect, useMemo } from "react";
+import React, { useState, createContext, useEffect, useContext } from "react";
+import { LocationContext } from "../location/location.context";
 import {
   drivingSchoolRequest,
   requestTransformer,
@@ -10,11 +11,12 @@ export const DrivingSchoolContextProvider = ({ children }) => {
   const [drivingSchools, setDrivingSchools] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const { location } = useContext(LocationContext);
 
-  const retrievedrivingSchools = () => {
+  const retrievedrivingSchools = (loc) => {
     setIsLoading(true);
     setTimeout(() => {
-      drivingSchoolRequest()
+      drivingSchoolRequest(loc)
         .then(requestTransformer)
         .then((results) => {
           setIsLoading(false);
@@ -27,9 +29,11 @@ export const DrivingSchoolContextProvider = ({ children }) => {
     }, 2000);
   };
   useEffect(() => {
-    retrievedrivingSchools();
-  }, []);
-  console.log(drivingSchools);
+    if (location) {
+      const locationString = `${location.lng},${location.lat}`;
+      retrievedrivingSchools(locationString);
+    }
+  }, [location]);
   return (
     <DrivingSchoolContext.Provider
       value={{
