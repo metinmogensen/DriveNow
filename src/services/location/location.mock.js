@@ -4,8 +4,8 @@ export const locations = {
       {
         geometry: {
           location: {
-            lng: 1,
-            lat: 1,
+            lng: 12.517535,
+            lat: 55.696017,
           },
           viewport: {
             northeast: {
@@ -25,7 +25,7 @@ export const locations = {
     results: [
       {
         geometry: {
-          location: { lat: 2, lng: 2 },
+          location: { lat: 56.1779549, lng: 9.551663 },
           viewport: {
             northeast: { lat: 2, lng: 2 },
             southwest: { lat: 2, lng: 2 },
@@ -40,8 +40,8 @@ export const locations = {
       {
         geometry: {
           location: {
-            lng: 3,
-            lat: 3,
+            lng: 12.6130346,
+            lat: 55.6089386,
           },
           viewport: {
             northeast: {
@@ -62,8 +62,8 @@ export const locations = {
       {
         geometry: {
           location: {
-            lng: 4,
-            lat: 4,
+            lng: 12.4060264,
+            lat: 55.619575,
           },
           viewport: {
             northeast: {

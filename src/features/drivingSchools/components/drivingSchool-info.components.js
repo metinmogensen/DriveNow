@@ -34,8 +34,13 @@ export const DrivingschoolInfo = ({ drivingSchools = {} }) => {
         <SchoolName>{name}</SchoolName>
         <Section>
           <Rating>
-            {ratingArray.map(() => (
-              <Ionicons name="md-heart-sharp" size={18} color="red" />
+            {ratingArray.map((_, i) => (
+              <Ionicons
+                key={`Heart-${i}`}
+                name="md-heart-sharp"
+                size={18}
+                color="red"
+              />
             ))}
           </Rating>
           <SectionEnd>

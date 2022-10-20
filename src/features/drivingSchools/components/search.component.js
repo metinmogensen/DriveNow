@@ -16,6 +16,7 @@ export const Search = () => {
     search(searchKeyword);
   }, []);
 
+
   return (
     <SearchContainer>
       <Searchbar

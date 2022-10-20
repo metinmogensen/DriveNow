@@ -10,13 +10,11 @@ const SafeArea = styled(SafeAreaView)`
   flex: 1;
   ${StatusBar.currentHeight && `margin-top:${StatusBar.currentHeight}px`};
 `;
-const SearchContainer = styled.View`
-  padding: ${(props) => props.theme.space[3]};
-`;
 
 const Loading = styled(ActivityIndicator)`
   margin-left: -25px;
 `;
+
 const LoadingContainer = styled.View`
   position: absolute;
   top: 50%;

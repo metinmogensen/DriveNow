@@ -26,6 +26,7 @@ export const requestTransformer = ({ results = [] }) => {
         drivingSchool.opening_hours && drivingSchool.opening_hours.open_now,
       isVacationClosed: drivingSchool.business_status === "CLOSED_TEMPORARILY",
       adress: drivingSchool.vicinity,
+      id: drivingSchool.place_id,
     };
   });
   return camelize(mappedResults);
