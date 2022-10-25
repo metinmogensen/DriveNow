@@ -4,9 +4,9 @@ import jylland from "./jylland.json";
 import københavn from "./kbh.json";
 
 export const mocks = {
-  "12.4060264, 55.6195750": fyn,
+  "12.4060264,55.619575": fyn,
   "12.6130346,55.6089386": amager,
-  "9.55166300,56.1779549": jylland,
+  "9.551663,56.1779549": jylland,
   "12.517535,55.696017": københavn,
 };
 
