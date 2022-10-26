@@ -9,12 +9,12 @@ export const locations = {
           },
           viewport: {
             northeast: {
-              lng: 1,
-              lat: 1,
+              lng: 12.527535,
+              lat: 55.706017,
             },
             southwest: {
-              lng: 1,
-              lat: 1,
+              lng: 12.477535,
+              lat: 55.686017,
             },
           },
         },
@@ -27,8 +27,8 @@ export const locations = {
         geometry: {
           location: { lat: 56.1779549, lng: 9.551663 },
           viewport: {
-            northeast: { lat: 2, lng: 2 },
-            southwest: { lat: 2, lng: 2 },
+            northeast: { lat: 56.2279549, lng: 10.051663 },
+            southwest: { lat: 56.1279549, lng: 9.051663 },
           },
         },
       },
@@ -45,12 +45,12 @@ export const locations = {
           },
           viewport: {
             northeast: {
-              lng: 3,
-              lat: 3,
+              lng: 12.6630346,
+              lat: 55.6589386,
             },
             southwest: {
-              lng: 3,
-              lat: 3,
+              lng: 12.5830346,
+              lat: 55.5689386,
             },
           },
         },
@@ -62,17 +62,17 @@ export const locations = {
       {
         geometry: {
           location: {
-            lng: 12.4060264,
-            lat: 55.619575,
+            lng: 10.387626,
+            lat: 55.323856,
           },
           viewport: {
             northeast: {
-              lng: 4,
-              lat: 4,
+              lng: 10.497626,
+              lat: 55.343856,
             },
             southwest: {
-              lng: 4,
-              lat: 4,
+              lng: 10.337626,
+              lat: 55.283856,
             },
           },
         },

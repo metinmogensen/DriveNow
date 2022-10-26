@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { Text } from "react-native";
 import { DrivingSchoolNavigator } from "./drivingSchool.navigator";
+import { MapScreen } from "../../features/map/screens/map.screen";
 
 const Tab = createBottomTabNavigator();
 
@@ -14,7 +15,6 @@ const TAB_ICON = {
 };
 
 const Settings = () => <Text>Settings</Text>;
-const Map = () => <Text>Map</Text>;
 
 export const AppNavigator = () => (
   <NavigationContainer>
@@ -44,7 +44,7 @@ export const AppNavigator = () => (
       />
       <Tab.Screen
         name="Kort"
-        component={Map}
+        component={MapScreen}
         options={{ headerShown: false }}
       />
       <Tab.Screen
