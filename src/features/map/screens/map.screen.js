@@ -34,7 +34,7 @@ export const MapScreen = () => {
           latitude: lat,
           longitude: lng,
           latitudeDelta: latDelta,
-          longitudeDelta: 1.5,
+          longitudeDelta: 0.2,
         }}
       >
         {drivingSchools.map((drivingSchools) => {

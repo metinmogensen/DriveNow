@@ -21,7 +21,7 @@ export const locations = {
       },
     ],
   },
-  jylland: {
+  silkeborg: {
     results: [
       {
         geometry: {
@@ -57,22 +57,22 @@ export const locations = {
       },
     ],
   },
-  fyn: {
+  odense: {
     results: [
       {
         geometry: {
           location: {
-            lng: 10.387626,
-            lat: 55.323856,
+            lng: 10.386026,
+            lat: 55.389556,
           },
           viewport: {
             northeast: {
-              lng: 10.497626,
-              lat: 55.343856,
+              lng: 10.437626,
+              lat: 55.433856,
             },
             southwest: {
-              lng: 10.337626,
-              lat: 55.283856,
+              lng: 10.357626,
+              lat: 55.353856,
             },
           },
         },

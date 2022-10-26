@@ -1,12 +1,12 @@
-import fyn from "./fyn.json";
+import odense from "./fyn.json";
 import amager from "./amager.json";
-import jylland from "./jylland.json";
+import silkeborg from "./jylland.json";
 import københavn from "./kbh.json";
 
 export const mocks = {
-  "10.387626,55.323856": fyn,
+  "10.386026,55.389556": odense,
   "12.6130346,55.6089386": amager,
-  "9.551663,56.1779549": jylland,
+  "9.551663,56.1779549": silkeborg,
   "12.517535,55.696017": københavn,
 };
 
