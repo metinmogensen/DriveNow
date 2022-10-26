@@ -1,6 +1,11 @@
 import React, { useContext } from "react";
-import { Searchbar, ActivityIndicator, Colors } from "react-native-paper";
-import { StatusBar, SafeAreaView, FlatList, View } from "react-native";
+import { ActivityIndicator, Colors } from "react-native-paper";
+import {
+  StatusBar,
+  SafeAreaView,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import styled from "styled-components/native";
 import { DrivingschoolInfo } from "../components/drivingSchool-info.components";
 import { DrivingSchoolContext } from "../../../services/drivingSchools/drivingSchools.context";
@@ -21,8 +26,9 @@ const LoadingContainer = styled.View`
   left: 50%;
 `;
 
-export const DrivingSchoolScreen = () => {
+export const DrivingSchoolScreen = ({ navigation }) => {
   const { isLoading, error, drivingSchools } = useContext(DrivingSchoolContext);
+  console.log(navigation);
   return (
     <SafeArea>
       {isLoading && (
@@ -35,7 +41,17 @@ export const DrivingSchoolScreen = () => {
       <FlatList
         data={drivingSchools}
         renderItem={({ item }) => {
-          return <DrivingschoolInfo drivingSchools={item} />;
+          return (
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate("DrivingSchoolsDetails", {
+                  drivingSchools: item,
+                })
+              }
+            >
+              <DrivingschoolInfo drivingSchools={item} />
+            </TouchableOpacity>
+          );
         }}
         keyExtractor={(item) => item.name}
         contentContainerStyle={{ padding: 16 }}

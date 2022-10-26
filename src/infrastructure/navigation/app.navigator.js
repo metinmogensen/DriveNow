@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { Text } from "react-native";
-import { DrivingSchoolScreen } from "../../features/drivingSchools/screens/drivingSchool.screen";
+import { DrivingSchoolNavigator } from "./drivingSchool.navigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -37,9 +37,21 @@ export const AppNavigator = () => (
         tabBarInactiveTintColor: "gray",
       })}
     >
-      <Tab.Screen name="Skoler" component={DrivingSchoolScreen} />
-      <Tab.Screen name="Kort" component={Map} />
-      <Tab.Screen name="Indstillinger" component={Settings} />
+      <Tab.Screen
+        name="Skoler"
+        component={DrivingSchoolNavigator}
+        options={{ headerShown: false }}
+      />
+      <Tab.Screen
+        name="Kort"
+        component={Map}
+        options={{ headerShown: false }}
+      />
+      <Tab.Screen
+        name="Indstillinger"
+        component={Settings}
+        options={{ headerShown: false }}
+      />
     </Tab.Navigator>
   </NavigationContainer>
 );
