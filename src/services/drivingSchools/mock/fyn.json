@@ -6,8 +6,8 @@
       "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": 55.323856,
-          "lng": 10.387626
+          "lat": 55.37899550930638, 
+          "lng": 10.41298967859173
         },
         "viewport": {
           "northeast": {

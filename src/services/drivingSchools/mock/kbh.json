@@ -6,8 +6,8 @@
       "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": 55.696017596611085,
-          "lng": 12.517535363748198
+          "lat": 55.66053112098533,
+          "lng": 12.516651826122724
         },
         "viewport": {
           "northeast": {
@@ -41,12 +41,12 @@
       "business_status": "CLOSED_TEMPORARILY",
       "geometry": {
         "location": {
-          "lat": 55.696017596611085,
-          "lng": 12.517535363748198
+          "lat": 55.69045392260565, 
+          "lng": 12.509607226570246
         },
         "viewport": {
           "northeast": {
-            "lat": 55.61957506003352,
+            "lat": 55.62457506003352,
             "lng": 12.406026477532995
           },
           "southwest": {
@@ -76,13 +76,13 @@
       "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": 55.696017596611085,
-          "lng": 12.517535363748198
+          "lat": 55.667444573887494,
+          "lng": 12.531712835787046
         },
         "viewport": {
           "northeast": {
             "lat": 55.61957506003352,
-            "lng": 12.406026477532995
+            "lng": 12.426026477532995
           },
           "southwest": {
             "lat": 55.61957506003352,
@@ -111,13 +111,13 @@
       "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": 55.696017596611085,
-          "lng": 12.517535363748198
+          "lat": 55.69169120459862,
+          "lng": 12.540263073259778
         },
         "viewport": {
           "northeast": {
-            "lat": 55.61957506003352,
-            "lng": 12.406026477532995
+            "lat": 55.61457506003352,
+            "lng": 12.446026477532995
           },
           "southwest": {
             "lat": 55.61957506003352,
@@ -146,8 +146,8 @@
       "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": 55.696017,
-          "lng": 12.517535
+          "lat": 55.683306812847576, 
+          "lng": 12.534226686187667
         },
         "viewport": {
           "northeast": {

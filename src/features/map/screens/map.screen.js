@@ -38,7 +38,16 @@ export const MapScreen = () => {
         }}
       >
         {drivingSchools.map((drivingSchools) => {
-          return null;
+          return (
+            <MapView.Marker
+              key={drivingSchools.name}
+              title={drivingSchools.name}
+              coordinate={{
+                latitude: drivingSchools.geometry.location.lat,
+                longitude: drivingSchools.geometry.location.lng,
+              }}
+            />
+          );
         })}
       </Map>
     </>
