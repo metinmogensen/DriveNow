@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import MapView from "react-native-maps";
 import styled from "styled-components/native";
-
+import { MapCallout } from "../components/map-callout.component";
 import { LocationContext } from "../../../services/location/location.context";
 import { DrivingSchoolContext } from "../../../services/drivingSchools/drivingSchools.context";
 import { Search } from "../components/search.component";
@@ -46,7 +46,11 @@ export const MapScreen = () => {
                 latitude: drivingSchools.geometry.location.lat,
                 longitude: drivingSchools.geometry.location.lng,
               }}
-            />
+            >
+              <MapView.Callout>
+                <MapCallout drivingSchools={drivingSchools} />
+              </MapView.Callout>
+            </MapView.Marker>
           );
         })}
       </Map>
