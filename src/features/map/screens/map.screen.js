@@ -11,7 +11,7 @@ const Map = styled(MapView)`
   width: 100%;
 `;
 
-export const MapScreen = () => {
+export const MapScreen = ({ navigation }) => {
   const { location } = useContext(LocationContext);
   const { drivingSchools = [] } = useContext(DrivingSchoolContext);
 
@@ -47,7 +47,13 @@ export const MapScreen = () => {
                 longitude: drivingSchools.geometry.location.lng,
               }}
             >
-              <MapView.Callout>
+              <MapView.Callout
+                onPress={() =>
+                  navigation.navigate("DrivingSchoolsDetails", {
+                    drivingSchools,
+                  })
+                }
+              >
                 <MapCallout drivingSchools={drivingSchools} />
               </MapView.Callout>
             </MapView.Marker>
