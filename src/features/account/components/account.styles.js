@@ -1,4 +1,6 @@
 import styled from "styled-components/native";
+import { Button } from "react-native-paper";
+import { colors } from "../../../infrastructure/theme/colors";
 
 export const AccountBackground = styled.ImageBackground.attrs({
   source: require("../../../../assets/bil.jpg"),
@@ -20,6 +22,13 @@ export const AccountContainer = styled.View`
   padding: ${(props) => props.theme.space[4]};
   margin-top: ${(props) => props.theme.space[2]};
 `;
+
+export const AuthButton = styled(Button).attrs({
+  color: colors.brand.primary,
+})`
+  padding: ${(props) => props.theme.space[2]};
+`;
+
 export const Spacer = styled.View`
   padding: 16px;
 `;
