@@ -26,6 +26,7 @@ export const DrivingschoolInfo = ({ drivingSchools = {} }) => {
     isVacationClosed = false,
   } = drivingSchools;
 
+  // Ved SectionEnd kunne man evt også lave en conditional rendering istedet gør således forløbig
   const ratingArray = Array.from(new Array(Math.floor(rating)));
   return (
     <DrivingSchoolCard elevation={5}>
