@@ -12,7 +12,7 @@ import {
 
 import { AuthenticationContext } from "../../../services/authentication/auth.context";
 
-export const LoginScreen = () => {
+export const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { onLogin, error } = useContext(AuthenticationContext);
@@ -57,6 +57,11 @@ export const LoginScreen = () => {
           </AuthButton>
         </Spacer>
       </AccountContainer>
+      <Spacer>
+        <AuthButton mode="contained" onPress={() => navigation.goBack()}>
+          Tilbage
+        </AuthButton>
+      </Spacer>
     </AccountBackground>
   );
 };
