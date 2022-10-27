@@ -10,7 +10,7 @@ import {
   Spacer,
 } from "../components/register.styles";
 
-export const RegisterScreen = () => {
+export const RegisterScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repeatedPassword, setRepeatedPassword] = useState("");
@@ -63,15 +63,6 @@ export const RegisterScreen = () => {
             onPress={() => onRegister(email, password, repeatedPassword)}
           >
             Register
-          </AuthButton>
-        </Spacer>
-        <Spacer>
-          <AuthButton
-            icon="lock-open-outline"
-            mode="contained"
-            onPress={() => onLogin(email, password)}
-          >
-            Login
           </AuthButton>
         </Spacer>
       </AccountContainer>
