@@ -30,7 +30,7 @@ export const AuthButton = styled(Button).attrs({
 `;
 
 export const Spacer = styled.View`
-  padding: 16px;
+  padding: 8px;
 `;
 
 export const AuthInput = styled(TextInput)`
@@ -38,6 +38,9 @@ export const AuthInput = styled(TextInput)`
 `;
 
 export const ErrorText = styled.Text`
+  max-width: 300px;
+  align-items: center;
+  align-self: center;
   color: ${(props) => props.theme.colors.ui.error};
   font-family: ${(props) => props.theme.fonts.body};
   font-size: ${(props) => props.theme.fontSizes.caption};
