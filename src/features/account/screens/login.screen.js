@@ -16,7 +16,7 @@ export const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { onLogin, error } = useContext(AuthenticationContext);
-
+  // benytte e fra auth-context og viser objectet som fejlbesked for brugeren
   return (
     <AccountBackground>
       <AccountCover />
