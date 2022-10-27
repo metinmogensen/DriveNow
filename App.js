@@ -24,6 +24,8 @@ export default function App() {
     return null;
   }
 
+  // obs som i kan se på træet har jeg lavet et theme object, som benyttes til, at have ens tema i hele appen
+  // temaet har alle adgang til.
   return (
     <>
       <ThemeProvider theme={theme}>
